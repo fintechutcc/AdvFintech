@@ -25,7 +25,7 @@
 ```
 pragma solidity ^0.5.16;
 
-contract MyData {
+contract SimpleSmartContract {
   uint myVariable;
 
   function set(uint x) public {
