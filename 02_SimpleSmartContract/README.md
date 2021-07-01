@@ -81,3 +81,4 @@ SimpleSmartContract.deployed().then(function(instance){return instance.set(2020)
 ```
 
 จากนั้นเรียกใช้เมธอด ```get``` อีกครั้ง แล้วสังเกตผลลัพธ์ที่ได้เมื่อเทียบกับผลลัพธ์การเรียก ```get``` ในครั้งแรก
+
