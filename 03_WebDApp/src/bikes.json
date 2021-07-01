@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "name": "เสือหมอบ",
+    "picture": "images/bike_01.jpg",
+    "price": "15,000 บาท",
+    "arrival_date": "ภายใน 15 วัน"
+  },
+  {
+    "id": 1,
+    "name": "จักรยานพับได้",
+    "picture": "images/bike_02.jpg",
+    "price": "14,000 บาท",
+    "arrival_date": "ภายใน 30 วัน"
+  },
+  {
+    "id": 2,
+    "name": "จักรยานแม่บ้าน สีส้ม",
+    "picture": "images/bike_03.jpg",
+    "price": "9,000 บาท",
+    "arrival_date": "ภายใน 45 วัน"
+  },
+  {
+    "id": 3,
+    "name": "จักรยานเด็ก สีชมพู",
+    "picture": "images/bike_04.jpg",
+    "price": "4,000 บาท",
+    "arrival_date": "ภายใน 7 วัน"
+  },
+  {
+    "id": 4,
+    "name": "จักรยานเด็ก สีเหลือง",
+    "picture": "images/bike_05.jpg",
+    "price": "4,000 บาท",
+    "arrival_date": "ภายใน 7 วัน"
+  },
+  {
+    "id": 5,
+    "name": "สามล้อ สีเหลือง",
+    "picture": "images/bike_06.jpg",
+    "price": "12,000 บาท",
+    "arrival_date": "ภายใน 15 วัน"
+  },
+  {
+    "id": 6,
+    "name": "สามล้อ สีขาว มอเตอร์ไฟฟ้า",
+    "picture": "images/bike_07.jpg",
+    "price": "29,000 บาท",
+    "arrival_date": "ภายใน 30 วัน"
+  },
+  {
+    "id": 7,
+    "name": "สามล้อ สีแดง มอเตอร์ไฟฟ้า",
+    "picture": "images/bike_08.jpg",
+    "price": "29,000 บาท",
+    "arrival_date": "ภายใน 30 วัน"
+  }
+]

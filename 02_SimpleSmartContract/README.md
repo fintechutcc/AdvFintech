@@ -1,9 +1,14 @@
 # Smart Contract อย่างง่าย
 
+## วัตถุประสงค์
+- การสร้างสมาร์ทคอนแท็กอย่างง่าย ที่สามารถเขียนข้อมูลและอ่านข้อมูลจากบล็อกเชน
+- การทดสอบอย่างง่ายผ่านสิ่งแวดล้อม truffle develop
+- การทดสอบแบบ Unit Test โดยใช้ภาษา Solidity
+
 ## ซอฟต์แวร์ที่ต้องติดตั้งเบื้องต้น
 - NodeJS
 - truffle
-- Visual Studio Code (optional)
+- Visual Studio Code
 
 ## Step 0
 สร้างไดเรกทอรี:
