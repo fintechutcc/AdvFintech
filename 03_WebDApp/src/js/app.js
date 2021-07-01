@@ -68,7 +68,7 @@ App = {
   },
 
   markReserved: function () {
-    var adoptionInstance;
+    var reservationInstance;
 
     App.contracts.Reservation.deployed().then(function (instance) {
       reservationInstance = instance;
