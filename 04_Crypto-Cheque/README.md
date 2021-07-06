@@ -3,18 +3,12 @@
 ต่อไปนี้เป็นตัวอย่างจำลองของคริปโตเช็ค เจ้าของเช็ค (Owner) สามารถเซ็ตผู้รับ (Payee) ซึ่งจำลองโดยใช้ Wallet Address และสามารถเซ็ตจำนวน Ether ที่ต้องการ จากนั้นจำเป็นต้องลงลายมือชื่อ ซึ่งในกรณีตัวอย่างนี้ได้ใช้ ethereum signature กำกับลงไปใน Smart Contract
 
 ## Step 1: เตรียมสิ่งแวดล้อม
-สร้างไดเร็กทอรี 04_Crypto-Cheque และย้ายไปที่ไดเร็คทอรีที่สร้างด้วยคำสั่งต่อไปนี้
+ย้ายไปที่ไดเร็คทอรีที่สร้างด้วยคำสั่ง cd ตามด้วยชื่อไดเร็คทอรี เช่น หากไดเร็คทอรีปัจจุบันคือ C:\Users\Suparerk\AdvFintech ให้ใช้คำสั่งต่อไปนี้
 ```
-mkdir 04_Crypto-Cheque
 cd 04_Crypto-Cheque
 ```
 
-ให้ค่าเริ่มต้นของ Truffle Framework โดยการใช้คำสั่งดังนี้
-```
-truffle init
-```
-
-ติดตั้ง NodeJS Modules ที่สำคัญตามที่กำหนดไว้ใน package.json ได้แก่ web3 และ openzeppelin-solidity ด้วยคำสั่งต่อไปนี้
+ที่ไดเร็คทอรี 04_Crypto-Cheque ให้ทำการติดตั้ง NodeJS Modules ที่สำคัญตามที่กำหนดไว้ใน package.json ได้แก่ web3 และ openzeppelin-solidity ด้วยคำสั่งต่อไปนี้
 
 ```
 npm install
