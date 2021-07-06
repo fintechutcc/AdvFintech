@@ -3,10 +3,10 @@
 ต่อไปนี้เป็นตัวอย่างจำลองของคริปโตเช็ค เจ้าของเช็ค (Owner) สามารถเซ็ตผู้รับ (Payee) ซึ่งจำลองโดยใช้ Wallet Address และสามารถเซ็ตจำนวน Ether ที่ต้องการ จากนั้นจำเป็นต้องลงลายมือชื่อ ซึ่งในกรณีตัวอย่างนี้ได้ใช้ ethereum signature กำกับลงไปใน Smart Contract
 
 ## Step 1: เตรียมสิ่งแวดล้อม
-สร้างไดเร็กทอรี 06_Crypto-Cheque และย้ายไปที่ไดเร็คทอรีที่สร้างด้วยคำสั่งต่อไปนี้
+สร้างไดเร็กทอรี 04_Crypto-Cheque และย้ายไปที่ไดเร็คทอรีที่สร้างด้วยคำสั่งต่อไปนี้
 ```
-mkdir 06_Crypto-Cheque
-cd 06_Crypto-Cheque
+mkdir 04_Crypto-Cheque
+cd 04_Crypto-Cheque
 ```
 
 ให้ค่าเริ่มต้นของ Truffle Framework โดยการใช้คำสั่งดังนี้
@@ -14,16 +14,16 @@ cd 06_Crypto-Cheque
 truffle init
 ```
 
-ติดตั้ง NodeJS Modules ที่สำคัญได้แก่ web3 และ openzeppelin-solidity ด้วยคำสั่งต่อไปนี้
+ติดตั้ง NodeJS Modules ที่สำคัญตามที่กำหนดไว้ใน package.json ได้แก่ web3 และ openzeppelin-solidity ด้วยคำสั่งต่อไปนี้
 
 ```
-npm install web3 openzeppelin-solidity@2.2.0
+npm install
 ```
 
 ## Step 2: สร้าง Smart Contract
 ใช้ Visual Studio Code สร้าง Cheque.sol ลงในไดเร็กทอรี Contracts ดังนี้
 ```
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.16;
 
 contract Cheque {
     mapping (uint => bool) usedNonces;
@@ -73,7 +73,7 @@ contract Cheque {
 
         bytes32 message = prefixed(keccak256(abi.encodePacked(msg.sender, amountWei, nonce, this)));
 
-        require(recoverSigner(message, sig) == owner, "Signer is not owner");
+        require(recoverSigner(message, sig) == owner, "Signer is not the owner");
 
         msg.sender.transfer(amountWei);
 
@@ -104,7 +104,7 @@ truffle migrate
 ```
 โปรดสังเกตค่า Ether ที่จ่ายออกไปจาก account แรก
 
-## Step 4: ทำการ Cheque Siging
+## Step 4: ทำการ Cheque Signing
 ปรับเปลี่ยนโค้ดต่อไปนี้ ในส่วน private key ของ accounts[0] ให้เป็นค่า private key ที่ได้จาก account แรกใน Ganache และให้ก็อปปี้ address ของ account ที่สองใน Ganache มาแทนข้อความ address ของ accounts[1]
 ```
 const Web3 = require('web3')
@@ -141,7 +141,7 @@ node index.js
 โปรดสังเกตผลลัพธ์ที่ได้ เช่น ค่า value, txCount, message, messageHash และก็อปปี้ signature เอาไว้ใช้ในขั้นตอนต่อไป
 
 ## Step 5: การรับเช็คโดย accounts[1]
-ที่ไดเร็กทอรีหลักของโปรเจ็คนี้ (เช่น 06_Crypto-Cheque) เปิดใช้งาน console ของ truffle เพื่อโต้ตอบกับ Smart Contract โดยใช้คำสั่งต่อไปนี้
+ที่ไดเร็กทอรีหลักของโปรเจ็คนี้ (เช่น 04_Crypto-Cheque) เปิดใช้งาน console ของ truffle เพื่อโต้ตอบกับ Smart Contract โดยใช้คำสั่งต่อไปนี้
 ```
 truffle console
 ```

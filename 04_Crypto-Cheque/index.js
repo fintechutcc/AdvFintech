@@ -13,13 +13,13 @@ let signPayment = async (recipient, amount) => {
     const hash = web3.utils.soliditySha3(recipient, amount, txCount, contractAddress)
 
     try {
-        const sigObject = await web3.eth.accounts.sign(hash, '0xdbf978f9c28a0e8048c283d91ec79c6ac12b044c92875d293a6f051cd41e75c1')
+        const sigObject = await web3.eth.accounts.sign(hash, '97316871bd3e702fa072ab9ec75dcd0c11932c7e85c7bcf5349d93aaa749d9d0')
         console.log(amount, txCount, sigObject)
     } catch (error) {
         console.log(error)
     }
 } 
 
-signPayment('0x2171c9809B1bc5e683f7363459f1fC0A6f9eDD06', 1e18)
+signPayment('0x4152Bc7419796D7bd252AD5EeE69905Cf1d31B85', 1e18)
 
 
