@@ -15,7 +15,7 @@ npm install
 ```
 
 ## Step 2: สร้าง Smart Contract
-ใช้ Visual Studio Code สร้าง Cheque.sol ลงในไดเร็กทอรี Contracts ดังนี้
+ใช้ Visual Studio Code เปิดไฟล์ Cheque.sol ในไดเร็กทอรี Contracts เพื่อดรวจดูโค้ดดังนี้
 ```
 pragma solidity ^0.5.16;
 
@@ -81,7 +81,7 @@ contract Cheque {
 ```
 
 ## Step 3: Smart Contract Migration
-ใช้ Visual Studio Code สร้างไฟล์ 2_deploy_contracts.js ในไดเร็กทอรี migrations ดังนี้
+ใช้ Visual Studio Code เปิดไฟล์ 2_deploy_contracts.js ในไดเร็กทอรี migrations เพื่อตรวจดูโค้ดดังนี้
 
 ```
 var Cheque = artifacts.require("Cheque");
@@ -116,16 +116,15 @@ let signPayment = async (recipient, amount) => {
     const hash = web3.utils.soliditySha3(recipient, amount, txCount, contractAddress)
 
     try {
-        const sigObject = await web3.eth.accounts.sign(hash, 'private key ของ accounts[0]')
+        const sigObject = await web3.eth.accounts.sign(hash, 'ให้เปลี่ยนข้อความนี้เป็น private key ของ accounts[0] ที่ได้จาก Ganache')
         console.log(amount, txCount, sigObject)
     } catch (error) {
         console.log(error)
     }
 } 
 
-signPayment('address ของ accounts[1]', 1e18)
+signPayment('ให้เปลี่ยนข้อความนี้เป็น address ปลายทางที่ต้องการส่งเช็คไป เช่น address ของ accounts[1] ใน Ganache', 2e18)
 ```
-
 
 รันโค้ดต่อไปนี้ เพื่อลงลายมือชื่อลงใน Cheque Smart Contract
 ```
@@ -167,4 +166,3 @@ app.claimPayment(1, txCount, sig, {from: accounts[1]})
 ```
 
 สังเกตผลลัพธ์ที่ได้ โดยเฉพาะค่า Eth ใน accounts[1] ของ Ganache
-
