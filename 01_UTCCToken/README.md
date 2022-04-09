@@ -10,3 +10,16 @@
 - Metamask
 - Visual Studio Code
 
+# UTCC Token บน remix
+`
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract UTCCToken is ERC20 {
+
+   constructor() ERC20("UTCCToken", "UCT") {
+     _mint(msg.sender, 1000*10**18);
+   }
+}
+`
