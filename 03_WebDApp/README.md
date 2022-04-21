@@ -17,7 +17,7 @@
 ### Step 2: รัน app.js
 ที่ Working Directory ของโปรเจ็คนี้ พิมพ์คำสั่งใน Command Line ดังนี้
 ```
-ืnpm run dev
+npm run dev
 ```
 
 โดยปกติ Default Web Browser จะทำงานทันที
